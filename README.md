@@ -6,10 +6,7 @@ This repository contains scripts and results for comparing the performance of 5G
 
 - [Overview](#overview)
 - [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+- [Methodology](#usage)
 
 ## Overview
 
