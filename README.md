@@ -38,7 +38,7 @@ sudo python3 add_subscribers.py 100
 ### Start Gnb
 Start the Gnb
 ```bash 
-sudo bash start_gnb.sh 'number of ues'
+sudo bash start_gnb.sh 
 
 ```
 ### Start UES
