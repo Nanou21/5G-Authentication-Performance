@@ -12,7 +12,7 @@ This repository contains scripts and results for comparing the performance of 5G
 
 The objective is to evaluate and compare their performance in terms of processing time, scalability, and resource utilization.
 
-## SEtup and Installation
+## Setup and Installation
 The first step is to setup the Open5gs-UERANSIM network.This network was established on two virtual machines on the network '192.68.0.xx'.
 This repo does not include the Open5gs setup nor the UERANSIM setup, Check out the [Open5GS repository](https://github.com/open5gs/open5gs) for 5G core network implementation and the [UERANSIM repository](https://github.com/aligungr/UERANSIM).
 
