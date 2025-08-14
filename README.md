@@ -67,7 +67,7 @@ The above scripts also saves the results into a csv file : registration_overhead
 Note that upon a complete test for a particular number of UEs the UEs should be stopped before restarting again.
 
 ```bash 
-nr -pkill ue 
+pkill nr-ue
 ```
 
 Also, for each authentication method, the core is rebuilt hence the services should be stopped then restarted lest we end up with occupied ports.# 5G-Authentication-Performance
