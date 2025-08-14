@@ -23,7 +23,7 @@ This repo does not include the Open5gs setup nor the UERANSIM setup, Check out t
 First we begin by choosing the authentication method we want to evaluate, there are two input options allowd by the user '5G_AKA' or 'EAP_AKA'.
 The methods can be changed by running [change_authmetod.py](change_authmetod.py) while feeding the authentication method as input
 ```bash
-python3 change_authmetod.py 'Authentication method'
+python3 change_authmethod.py 'Authentication method'
 ```
 
 Upon a successful network setup, we start the core services by running the shell script [Start services](startservices.sh).
