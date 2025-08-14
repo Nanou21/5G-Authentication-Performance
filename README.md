@@ -20,32 +20,43 @@ The first step is to setup the Open5gs-UERANSIM network.This network was establi
 This repo does not include the Open5gs setup nor the UERANSIM setup, Check out the [Open5GS repository](https://github.com/open5gs/open5gs) for 5G core network implementation and the [UERANSIM repository](https://github.com/aligungr/UERANSIM).
 
 ## Usage
+### Change Authentication Method
 First we begin by choosing the authentication method we want to evaluate, there are two input options allowd by the user '5G_AKA' or 'EAP_AKA'.
 The methods can be changed by running [change_authmetod.py](change_authmetod.py) while feeding the authentication method as input
 ```bash
 python3 change_authmethod.py 'Authentication method'
 ```
-
+### Start 5G services
 Upon a successful network setup, we start the core services by running the shell script [Start services](startservices.sh).
 ```bash
 sudo bash startservices.sh
 ```
 In the UERANSIM start the gnb by running the [start gnb](start_gnb.sh).
+### Add number of Subscribers
 Our test was done for 100 User Equipment, hence the 100 subscribers were added in the 5G core by running the [add_subscriber](add_subscribers.py) alongside the desired number of users. 
 ```bash
 # Update package list
 sudo python3 add_subscribers.py 100
 ```
-The UEs are started on the UERANSIM side by running the [launch_ues.sh](launch_ues.sh) file, the number specified based on the current test
+### Start Gnb
+Start the Gnb
 ```bash 
-sudo python3 launch_ues.sh <number of ues>
+sudo bash start_gnb.sh 'number of ues'
 
 ```
+### Start UES
+The UEs are started on the UERANSIM side by running the [launch_ues.sh](launch_ues.sh) file, the number specified based on the current test
+```bash 
+sudo bash launch_ues.sh 'number of ues'
+
+```
+### Measure latency 
 The time elapsed per number of ue registration is recorded by by running the script [processing_time.py](processing_time.py) 
 ```bash 
 sudo python3 processing_time.py
 
 ```
+### Measure the memory usage
 Like wise for recording the CPU usage run [Memoryusage.py](Memoryusage.py) 
 ```bash 
 sudo python3 Memoryusage.py
@@ -55,6 +66,7 @@ The above script performs both time and cpu analysis. Thus it can be run to reco
 
 The above scripts also saves the results into a csv file : registration_overhead_summary.csv.
 
+### Note
 Note that upon a complete test for a particular number of UEs the UEs should be stopped before restarting again.
 
 ```bash 
