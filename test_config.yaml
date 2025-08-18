@@ -1,0 +1,67 @@
+# test_config.yaml
+# Configuration file for automated 5G authentication performance tests
+
+test_configuration:
+  # Test parameters
+  authentication_methods:
+    - "5G_AKA"
+    - "EAP_AKA"
+  
+  ue_counts:
+    - 10
+    - 25
+    - 50
+    - 75
+    - 100
+  
+  iterations_per_test: 3
+  
+  # Timing configuration (in seconds)
+  timing:
+    service_restart_wait: 15
+    gnb_startup_wait: 10
+    ue_settlement_wait: 5
+    test_duration_base: 60  # Base duration for tests
+    test_duration_per_ue: 0.5  # Additional time per UE
+    cleanup_wait: 5
+    inter_test_wait: 30
+  
+  # Paths and commands
+  scripts:
+    change_auth: "python3 change_authmethod.py"
+    start_services: "sudo bash startservices.sh"
+    add_subscribers: "sudo python3 add_subscribers.py"
+    start_gnb: "sudo bash start_gnb.sh"
+    launch_ues: "sudo bash launch_ues.sh"
+    monitor_performance: "sudo python3 Memoryusage.py"
+    cleanup_ues: "pkill nr-ue"
+  
+  # Output configuration
+  output:
+    results_dir_prefix: "automated_5g_tests"
+    result_file_name: "registration_overhead_summary.csv"
+    log_level: "INFO"
+    generate_plots: true
+    consolidate_results: true
+  
+  # Resource monitoring
+  monitoring:
+    enabled: true
+    cpu_monitoring: true
+    memory_monitoring: true
+    network_monitoring: false
+    disk_monitoring: false
+  
+  # Error handling
+  error_handling:
+    max_retries: 2
+    timeout_seconds: 300
+    continue_on_failure: true
+    cleanup_on_error: true
+  
+  # Advanced options
+  advanced:
+    parallel_monitoring: false
+    custom_test_duration: false
+    save_intermediate_logs: true
+    compress_results: false
