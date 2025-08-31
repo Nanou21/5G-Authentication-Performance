@@ -1,5 +1,6 @@
-cff-version: 1.2.0
-authors = Valentina Walters Ning Teboh
-title = "5G Authentication Performance Analysis"
-date-released = 2025-08-13
+@misc{5G Authentication Performance Analysis,
+authors = {Valentina Walters Ning Teboh, Peter Foytik},
+title = {{5G Authentication Performance Analysis}},
+date-released = 2025-08-13,
 url = "https://github.com/Nanou21/5G-Authentication-Performance"
+}
