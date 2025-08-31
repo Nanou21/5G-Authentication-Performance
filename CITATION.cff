@@ -1,6 +1,9 @@
-@misc{5G Authentication Performance Analysis,
-authors = {Valentina Walters Ning Teboh, Peter Foytik},
-title = {{5G Authentication Performance Analysis}},
-date-released = 2025-08-13,
-url = "https://github.com/Nanou21/5G-Authentication-Performance"
-}
+message: "5G Authentication Performance Analysis"
+authors:
+  - family-names: Teboh
+    given-names:  Valentina Walters Nanou
+  - family-names: Foytik
+    given-names:  Peter 
+title: "5G Authentication Performance Analysis"
+date-released: 2025-08-13
+url: "https://github.com/Nanou21/5G-Authentication-Performance"
