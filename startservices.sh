@@ -1,15 +1,15 @@
 #!/bin/bash
 
-./install/bin/open5gs-nrfd &
-./install/bin/open5gs-scpd &
-./install/bin/open5gs-amfd &
-./install/bin/open5gs-smfd &
-./install/bin/open5gs-upfd &
-./install/bin/open5gs-ausfd &
-./install/bin/open5gs-udmd &
-./install/bin/open5gs-pcfd &
-./install/bin/open5gs-nssfd &
-./install/bin/open5gs-udrd &
-./install/bin/open5gs-bsfd &
+/home/gcore1/open5gs/install/bin/open5gs-nrfd &
+/home/gcore1/open5gs/install/bin/open5gs-scpd &
+/home/gcore1/open5gs/install/bin/open5gs-amfd &
+/home/gcore1/open5gs/install/bin/open5gs-smfd &
+/home/gcore1/open5gs/install/bin/open5gs-upfd &
+/home/gcore1/open5gs/install/bin/open5gs-ausfd &
+/home/gcore1/open5gs/install/bin/open5gs-udmd &
+/home/gcore1/open5gs/install/bin/open5gs-pcfd &
+/home/gcore1/open5gs/install/bin/open5gs-nssfd &
+/home/gcore1/open5gs/install/bin/open5gs-udrd &
+/home/gcore1/open5gs/install/bin/open5gs-bsfd &
 
 

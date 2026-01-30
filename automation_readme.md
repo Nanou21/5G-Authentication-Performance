@@ -1,59 +1,69 @@
-# 5G Authentication Performance Test Automation
+# 5G Authentication Performance Evaluation  
+### Testbed-Based Comparison of 5G-AKA and EAP-AKA′
 
-This repository provides automated testing tools for comparing the performance of 5G-AKA and EAP-AKA' authentication methods in 5G networks. The automation suite includes Python-based orchestration with configuration management and comprehensive result analysis.
+This repository contains the automation, monitoring, and analysis tools used to evaluate the **performance impact of 5G authentication protocols**, specifically **5G-AKA** and **EAP-AKA′**, on a real 5G standalone testbed built with **Open5GS** and **UERANSIM**.
 
-## 📋 Table of Contents
+The framework measures:
+- Per-UE registration latency
+- AMF CPU utilization
+- AMF memory usage
+- Statistical significance using confidence intervals and Welch’s t-test
 
-- [Prerequisites](#prerequisites)
-- [Quick Start](#quick-start)
-- [Python Orchestrator](#python-orchestrator)
-- [Configuration Management](#configuration-management)
-- [Understanding Results](#understanding-results)
-- [Customization](#customization)
-- [Troubleshooting](#troubleshooting)
-- [Advanced Usage](#advanced-usage)
+All results reported in the associated paper were generated using this repository.
 
-## 🔧 Prerequisites
+---
+
+## Testbed Overview
+
+- **5G Core:** Open5GS (Standalone)
+- **UE / gNB:** UERANSIM
+- **Deployment:** Two Ubuntu virtual machines
+- **Network:** NAT (`192.168.0.0/24`)
+- **Authentication Methods:** 5G-AKA, EAP-AKA′
+- **Metrics:** Latency, CPU usage, Memory usage
+
+---
+
+## Prerequisites
 
 ### System Requirements
-- Ubuntu 18.04+ or similar Linux distribution
+- Ubuntu 18.04 or later
 - Python 3.7+
-- Open5GS (5G Core Network)
-- UERANSIM (UE and RAN Simulator)
-- sudo privileges for service management
-
-### Network Setup
-- Two VMs configured on network `192.168.0.xx`
-- Open5GS properly configured and tested
-- UERANSIM properly configured and tested
-- All original test scripts from the base repository
+- Open5GS (built from source)
+- UERANSIM (built from source)
+- sudo privileges
 
 ### Python Dependencies
 ```bash
-pip install pandas matplotlib pyyaml psutil
-```
+pip install numpy pandas scipy matplotlib psutil pyyaml
+
 
 ### Required Files
 Ensure these files are in your working directory:
-- `change_authmethod.py`
-- `startservices.sh`
-- `add_subscribers.py`
-- `start_gnb.sh`
-- `launch_ues.sh`
-- `Memoryusage.py`
+.
+├── automated_test_orchestrator.py   # Main experiment orchestrator
+├── Memoryusage.py                   # AMF CPU and memory monitor
+├── analysis_statistics.py           # Statistical analysis and plots
+├── test_config.yaml                 # Experiment configuration
+├── change_authmethod.py             # Switch authentication method
+├── startservices.sh                 # Start Open5GS services
+├── start_gnb.sh                     # Start gNB
+├── launch_ues.sh                    # Launch UEs
+├── add_subscribers.py               # Provision subscribers
+└── README.md
 
 ## 🚀 Quick Start
 
 ### 1. Basic Automated Testing (Default Configuration)
 ```bash
 # Run with built-in defaults - no configuration file needed
-python3 automated_test_orchestrator.py
+python3 python_test_orchestrator.py
 ```
 
 ### 2. Using YAML Configuration
 ```bash
 # Run with YAML configuration file
-python3 automated_test_orchestrator.py --config test_config.yaml
+python3 python_test_orchestrator.py --config test_config.yaml
 ```
 
 ### 3. Command Line Overrides
@@ -171,6 +181,14 @@ automated_test_results_20250818_143022/
 └── EAP_AKA_100ues_iter3/
     └── ...
 ```
+### Statistics Analysis
+The 'analysis_statistics.py' performs an extensive statistical analysis for the per UE latency est, which yeilds the following files 
+automated_test_results_YYYYMMDD_HHMMSS/
+├── auth_method_summary_stats.csv
+├── aka_vs_eap_comparison.csv
+├── summary_statistics.csv
+├── registration_time_ci.png
+└── EAP_AKA_100ues_iter10/
 
 ## ⚙️ Configuration Management
 
@@ -617,9 +635,9 @@ python3 automated_test_orchestrator.py --config daily_monitor.yaml
 # Create regression test configuration
 cat > regression_test.yaml << EOF
 test_configuration:
-  authentication_methods: ["5G_AKA"]  # Test specific method
-  ue_counts: [10, 25, 50, 75, 100]
-  iterations_per_test: 5  # More iterations for accuracy
+  authentication_methods: ["5G_AKA", "EAP_AKA"]
+  ue_counts: [10, 25, 40, 55, 70, 85, 100]
+  iterations_per_test: 10
 
 output:
   results_dir_prefix: "regression_test"

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import psutil
 import time
 import re
@@ -7,44 +9,71 @@ from datetime import datetime
 from collections import defaultdict
 import csv
 from pathlib import Path
+import argparse
+import signal
+import sys
+import os
 
-CSV_FILE = "registration_overhead_summary.csv"
+# =========================
+# Globals
+# =========================
+CSV_FILE = None
+LOG_FILE = None
+SAMPLING_INTERVAL = 0.1
 
-LOG_FILE = "amf.log"
-SAMPLING_INTERVAL = 0.1  # seconds
-
-samples = []  # List of (timestamp, cpu%, mem%)
+samples = []
 sampling = True
+stop_event = threading.Event()
+
+# UE -> {start, end}
 ue_windows = defaultdict(lambda: {"start": None, "end": None})
 
 
+# =========================
+# Signal handling
+# =========================
+def _handle_signal(signum, frame):
+    global sampling
+    sampling = False
+    stop_event.set()
+
+signal.signal(signal.SIGINT, _handle_signal)
+signal.signal(signal.SIGTERM, _handle_signal)
+
+
+# =========================
+# AMF PID
+# =========================
 def get_amf_pid():
     try:
         output = subprocess.check_output(["pgrep", "-f", "open5gs-amfd"])
         return int(output.decode().strip())
     except subprocess.CalledProcessError:
         print("[ERROR] AMF process not found.")
-        exit(1)
+        sys.exit(1)
 
 
+# =========================
+# CPU + memory sampler
+# =========================
 def sample_amf_usage(proc):
-    """Continuously sample CPU/memory while 'sampling' is True."""
-    while sampling:
+    proc.cpu_percent(interval=None)  # prime
+    while sampling and not stop_event.is_set():
         try:
             ts = datetime.now()
-            cpu = proc.cpu_percent(interval=None)
+            cpu = proc.cpu_percent(interval=SAMPLING_INTERVAL)
             mem = proc.memory_info().rss / (1024 * 1024)  # MB
             samples.append((ts, cpu, mem))
-            time.sleep(SAMPLING_INTERVAL)
         except psutil.NoSuchProcess:
-            print("[WARN] AMF exited during sampling.")
             break
 
 
+# =========================
+# Log monitor (UE windows)
+# =========================
 def monitor_log(num_expected_ues):
-    """Watch log to detect start/complete times for multiple UEs."""
     with open(LOG_FILE, "r") as f:
-        f.seek(0, 2)  # Jump to end
+        f.seek(0, 2)  # tail
 
         while True:
             line = f.readline()
@@ -59,126 +88,163 @@ def monitor_log(num_expected_ues):
 
             if suci_match:
                 ue = suci_match.group(1)
-                if not ue_windows[ue]["start"]:
+                if ue_windows[ue]["start"] is None:
                     ue_windows[ue]["start"] = ts
-                    print(f"[INFO] Registration started for UE-{ue}")
 
             if imsi_match and "Registration complete" in line:
                 ue = imsi_match.group(1)
-                if not ue_windows[ue]["end"]:
+                if ue_windows[ue]["end"] is None:
                     ue_windows[ue]["end"] = ts
-                    print(f"[INFO] Registration complete for UE-{ue}")
 
-            registered_ues = [ue for ue in ue_windows if ue_windows[ue]["start"] and ue_windows[ue]["end"]]
-            if len(registered_ues) >= num_expected_ues:
-                print(f"[INFO] All {num_expected_ues} UEs registered. Stopping.")
+            completed = [
+                ue for ue in ue_windows
+                if ue_windows[ue]["start"] and ue_windows[ue]["end"]
+            ]
+
+            if len(completed) >= num_expected_ues:
+                print(f"[INFO] All {num_expected_ues} UEs registered.")
                 break
 
 
-def analyze_per_ue():
-    print("\n--- Registration Overhead Per UE ---")
+# =========================
+# Analysis + CSV writing
+# =========================
+def analyze_and_write():
+    if not samples:
+        print("[WARN] No CPU/memory samples collected.")
+        return
+
+    per_ue_rows = []
     all_start_times = []
     all_end_times = []
 
+    # ---- Per-UE registration time ----
     for ue, window in ue_windows.items():
         start, end = window["start"], window["end"]
         if not start or not end:
-            print(f"UE-{ue}: Incomplete registration data.")
             continue
 
-        window_samples = [s for s in samples if start <= s[0] <= end]
-        if not window_samples:
-            print(f"UE-{ue}: No samples recorded.")
-            continue
-
-        cpu_avg = sum(s[1] for s in window_samples) / len(window_samples)
-        mem_avg = sum(s[2] for s in window_samples) / len(window_samples)
         duration = (end - start).total_seconds()
-
+        per_ue_rows.append((ue, start, end, round(duration, 3)))
         all_start_times.append(start)
         all_end_times.append(end)
 
-        print(f"UE-{ue} | Time: {duration:.2f}s | Avg CPU: {cpu_avg:.2f}% | Avg Mem: {mem_avg:.2f} MB")
-
-    # ✅ Calculate global average for combined registration period
-    if all_start_times and all_end_times:
-        global_start = min(all_start_times)
-        global_end = max(all_end_times)
-        global_samples = [s for s in samples if global_start <= s[0] <= global_end]
-
-        if global_samples:
-            cpu_global_avg = sum(s[1] for s in global_samples) / len(global_samples)
-            mem_global_avg = sum(s[2] for s in global_samples) / len(global_samples)
-            global_duration = (global_end - global_start).total_seconds()
-
-            print("\n--- Overall Combined Overhead ---")
-            print(f"Total Time: {global_duration:.2f}s")
-            print(f"Avg CPU Usage (All UEs): {cpu_global_avg:.2f}%")
-            print(f"Avg Memory Usage (All UEs): {mem_global_avg:.2f} MB")
-        else:
-            print("\n[WARN] No global samples found in overall UE window.")
-                  # ✅ Append results to CSV
-    headers = [
-        "timestamp", "num_UEs", "total_time_sec",
-        "avg_CPU_percent", "avg_memory_MB"
-    ]
-    row = [
-        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        len(ue_windows),
-        round(global_duration, 2),
-        round(cpu_global_avg, 2),
-        round(mem_global_avg, 2)
-    ]
-
-    write_headers = not Path(CSV_FILE).exists()
-    with open(CSV_FILE, mode='a', newline='') as f:
-        writer = csv.writer(f)
-        if write_headers:
-            writer.writerow(headers)
-        writer.writerow(row)
-
-    print(f"[INFO] Summary saved to: {CSV_FILE}")
-
-
-def main():
-    global sampling
-
-    try:
-        num_expected_ues = int(input("Enter number of UEs to monitor: "))
-        if num_expected_ues <= 0:
-            raise ValueError
-    except ValueError:
-        print("[ERROR] Please enter a valid positive integer.")
+    if not per_ue_rows:
+        print("[WARN] No complete UE registration windows.")
         return
 
-    amf_pid = get_amf_pid()
-    if not psutil.pid_exists(amf_pid):
-        print(f"[ERROR] AMF PID {amf_pid} not running.")
-        exit(1)
+    # ---- Average per-UE registration time (KEY METRIC) ----
+    avg_ue_time = sum(r[3] for r in per_ue_rows) / len(per_ue_rows)
 
-    amf_proc = psutil.Process(amf_pid)
+    # ---- Global window (system behavior) ----
+    global_start = min(all_start_times)
+    global_end = max(all_end_times)
+    global_duration = (global_end - global_start).total_seconds()
 
-    # Prime CPU sampling
-    amf_proc.cpu_percent(interval=None)
+    global_samples = [
+        s for s in samples if global_start <= s[0] <= global_end
+    ]
 
-    # Start sampling thread
-    sampler_thread = threading.Thread(target=sample_amf_usage, args=(amf_proc,))
-    sampler_thread.start()
+    if not global_samples:
+        print("[WARN] No samples inside global window.")
+        return
 
-    # Give time to warm up
-    time.sleep(0.5)
+    cpu_avg = sum(s[1] for s in global_samples) / len(global_samples)
+    mem_avg = sum(s[2] for s in global_samples) / len(global_samples)
 
-    # Monitor log until all UEs are done
-    monitor_log(num_expected_ues)
+    CSV_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    # Stop sampling
+    # =========================
+    # Summary CSV (USED BY ORCHESTRATOR)
+    # =========================
+    summary_headers = [
+        "timestamp",
+        "num_UEs",
+        "total_time_sec",
+        "avg_ue_registration_time_sec",
+        "avg_CPU_percent",
+        "avg_memory_MB"
+    ]
+
+    summary_row = [
+        datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        len(per_ue_rows),
+        round(global_duration, 3),
+        round(avg_ue_time, 3),
+        round(cpu_avg, 2),
+        round(mem_avg, 2)
+    ]
+
+    write_header = not CSV_FILE.exists()
+    with open(CSV_FILE, "a", newline="") as f:
+        writer = csv.writer(f)
+        if write_header:
+            writer.writerow(summary_headers)
+        writer.writerow(summary_row)
+        f.flush()
+        os.fsync(f.fileno())
+
+    print(f"[INFO] Summary written to {CSV_FILE}")
+
+    # =========================
+    # Per-UE CSV (DETAILED ANALYSIS)
+    # =========================
+    per_ue_csv = CSV_FILE.with_name(CSV_FILE.stem + "_per_ue.csv")
+
+    with open(per_ue_csv, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow([
+            "UE",
+            "registration_start",
+            "registration_end",
+            "registration_time_sec"
+        ])
+        for row in per_ue_rows:
+            writer.writerow(row)
+
+    print(f"[INFO] Per-UE registration times written to {per_ue_csv}")
+
+
+# =========================
+# Main
+# =========================
+def main():
+    global CSV_FILE, LOG_FILE, SAMPLING_INTERVAL, sampling
+    global samples, ue_windows
+
+    samples = []
+    ue_windows = defaultdict(lambda: {"start": None, "end": None})
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", required=True)
+    parser.add_argument("--num-ues", type=int, required=True)
+    parser.add_argument("--log", required=True)
+    parser.add_argument("--interval", type=float, default=0.1)
+    args = parser.parse_args()
+
+    CSV_FILE = Path(args.output)
+    LOG_FILE = args.log
+    SAMPLING_INTERVAL = args.interval
+
+    amf_proc = psutil.Process(get_amf_pid())
+
+    sampler = threading.Thread(
+        target=sample_amf_usage,
+        args=(amf_proc,),
+        daemon=True
+    )
+    sampler.start()
+
+    time.sleep(0.2)
+
+    monitor_log(args.num_ues)
+
     sampling = False
-    sampler_thread.join()
+    stop_event.set()
+    sampler.join(timeout=2.0)
 
-    # Analyze
-    analyze_per_ue()
+    analyze_and_write()
 
 
 if __name__ == "__main__":
     main()
-

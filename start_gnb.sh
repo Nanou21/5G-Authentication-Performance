@@ -1,1 +1,1 @@
-./build/nr-gnb -c config/open5gs-gnb.yaml
+/home/ueransim/UERANSIM/build/nr-gnb -c /home/ueransim/UERANSIM/config/open5gs-gnb.yaml

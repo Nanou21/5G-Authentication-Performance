@@ -1,0 +1,1402 @@
+[
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 5,
+    "test_duration": 24.733,
+    "avg_ue_registration_time_sec": 0.249,
+    "max_cpu_usage": 1.22,
+    "avg_memory_usage": 34.28,
+    "timestamp": "2026-01-28 12:17:58"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 5,
+    "test_duration": 39.861,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 1.07,
+    "avg_memory_usage": 34.55,
+    "timestamp": "2026-01-28 12:57:03"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 11,
+    "test_duration": 101.276,
+    "avg_ue_registration_time_sec": 0.264,
+    "max_cpu_usage": 1.26,
+    "avg_memory_usage": 35.72,
+    "timestamp": "2026-01-28 16:18:46"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 19,
+    "test_duration": 55.764,
+    "avg_ue_registration_time_sec": 0.246,
+    "max_cpu_usage": 0.98,
+    "avg_memory_usage": 34.8,
+    "timestamp": "2026-01-28 14:16:54"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 19,
+    "test_duration": 70.371,
+    "avg_ue_registration_time_sec": 0.244,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 35.14,
+    "timestamp": "2026-01-28 21:00:57"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 11,
+    "test_duration": 57.656,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 0.9,
+    "avg_memory_usage": 34.93,
+    "timestamp": "2026-01-28 14:00:45"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 9,
+    "test_duration": 55.148,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 1.02,
+    "avg_memory_usage": 34.84,
+    "timestamp": "2026-01-28 13:55:05"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 13,
+    "test_duration": 57.518,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.94,
+    "avg_memory_usage": 34.97,
+    "timestamp": "2026-01-28 14:04:17"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 1,
+    "test_duration": 55.123,
+    "avg_ue_registration_time_sec": 0.246,
+    "max_cpu_usage": 1.03,
+    "avg_memory_usage": 34.83,
+    "timestamp": "2026-01-28 19:31:48"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 7,
+    "test_duration": 39.856,
+    "avg_ue_registration_time_sec": 0.257,
+    "max_cpu_usage": 1.24,
+    "avg_memory_usage": 34.59,
+    "timestamp": "2026-01-28 13:00:18"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 1,
+    "test_duration": 56.517,
+    "avg_ue_registration_time_sec": 0.242,
+    "max_cpu_usage": 0.91,
+    "avg_memory_usage": 34.93,
+    "timestamp": "2026-01-28 13:32:39"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 5,
+    "test_duration": 100.756,
+    "avg_ue_registration_time_sec": 0.242,
+    "max_cpu_usage": 0.95,
+    "avg_memory_usage": 35.6,
+    "timestamp": "2026-01-28 21:59:13"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 11,
+    "test_duration": 55.04,
+    "avg_ue_registration_time_sec": 0.253,
+    "max_cpu_usage": 1.05,
+    "avg_memory_usage": 34.93,
+    "timestamp": "2026-01-28 19:53:35"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 11,
+    "test_duration": 70.383,
+    "avg_ue_registration_time_sec": 0.244,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 35.01,
+    "timestamp": "2026-01-28 20:43:33"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 19,
+    "test_duration": 9.263,
+    "avg_ue_registration_time_sec": 0.26,
+    "max_cpu_usage": 1.69,
+    "avg_memory_usage": 34.07,
+    "timestamp": "2026-01-28 12:07:20"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 17,
+    "test_duration": 39.916,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 1.06,
+    "avg_memory_usage": 34.58,
+    "timestamp": "2026-01-28 19:23:13"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 9,
+    "test_duration": 87.215,
+    "avg_ue_registration_time_sec": 0.266,
+    "max_cpu_usage": 1.53,
+    "avg_memory_usage": 35.44,
+    "timestamp": "2026-01-28 15:24:38"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 7,
+    "test_duration": 9.457,
+    "avg_ue_registration_time_sec": 0.252,
+    "max_cpu_usage": 0.97,
+    "avg_memory_usage": 34.24,
+    "timestamp": "2026-01-28 11:46:45"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 13,
+    "test_duration": 70.793,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 0.91,
+    "avg_memory_usage": 35.28,
+    "timestamp": "2026-01-28 14:43:16"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 11,
+    "test_duration": 24.694,
+    "avg_ue_registration_time_sec": 0.259,
+    "max_cpu_usage": 1.31,
+    "avg_memory_usage": 34.16,
+    "timestamp": "2026-01-28 12:28:33"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 5,
+    "test_duration": 24.645,
+    "avg_ue_registration_time_sec": 0.264,
+    "max_cpu_usage": 1.27,
+    "avg_memory_usage": 34.47,
+    "timestamp": "2026-01-28 18:21:15"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 9,
+    "test_duration": 39.821,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 34.66,
+    "timestamp": "2026-01-28 13:05:24"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 5,
+    "test_duration": 69.813,
+    "avg_ue_registration_time_sec": 0.252,
+    "max_cpu_usage": 1.29,
+    "avg_memory_usage": 35.07,
+    "timestamp": "2026-01-28 14:28:12"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 5,
+    "test_duration": 39.944,
+    "avg_ue_registration_time_sec": 0.251,
+    "max_cpu_usage": 1.07,
+    "avg_memory_usage": 34.58,
+    "timestamp": "2026-01-28 19:01:52"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 15,
+    "test_duration": 55.187,
+    "avg_ue_registration_time_sec": 0.247,
+    "max_cpu_usage": 0.94,
+    "avg_memory_usage": 34.88,
+    "timestamp": "2026-01-28 20:02:41"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 11,
+    "test_duration": 9.307,
+    "avg_ue_registration_time_sec": 0.264,
+    "max_cpu_usage": 1.23,
+    "avg_memory_usage": 34.21,
+    "timestamp": "2026-01-28 11:52:15"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 19,
+    "test_duration": 86.607,
+    "avg_ue_registration_time_sec": 0.274,
+    "max_cpu_usage": 1.68,
+    "avg_memory_usage": 35.32,
+    "timestamp": "2026-01-28 15:50:07"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 5,
+    "test_duration": 55.093,
+    "avg_ue_registration_time_sec": 0.252,
+    "max_cpu_usage": 0.98,
+    "avg_memory_usage": 34.83,
+    "timestamp": "2026-01-28 19:38:51"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 9,
+    "test_duration": 10.924,
+    "avg_ue_registration_time_sec": 0.261,
+    "max_cpu_usage": 1.07,
+    "avg_memory_usage": 34.37,
+    "timestamp": "2026-01-28 17:52:54"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 1,
+    "test_duration": 86.45,
+    "avg_ue_registration_time_sec": 0.254,
+    "max_cpu_usage": 1.24,
+    "avg_memory_usage": 35.48,
+    "timestamp": "2026-01-28 15:05:48"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 15,
+    "test_duration": 55.098,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.99,
+    "avg_memory_usage": 34.86,
+    "timestamp": "2026-01-28 14:09:54"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 17,
+    "test_duration": 72.025,
+    "avg_ue_registration_time_sec": 0.238,
+    "max_cpu_usage": 0.94,
+    "avg_memory_usage": 34.95,
+    "timestamp": "2026-01-28 20:57:12"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 5,
+    "test_duration": 11.867,
+    "avg_ue_registration_time_sec": 0.229,
+    "max_cpu_usage": 0.7,
+    "avg_memory_usage": 34.08,
+    "timestamp": "2026-01-28 11:42:39"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 1,
+    "test_duration": 23.746,
+    "avg_ue_registration_time_sec": 0.261,
+    "max_cpu_usage": 1.55,
+    "avg_memory_usage": 34.41,
+    "timestamp": "2026-01-28 12:10:20"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 1,
+    "test_duration": 39.842,
+    "avg_ue_registration_time_sec": 0.254,
+    "max_cpu_usage": 1.06,
+    "avg_memory_usage": 34.58,
+    "timestamp": "2026-01-28 18:53:31"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 3,
+    "test_duration": 24.814,
+    "avg_ue_registration_time_sec": 0.256,
+    "max_cpu_usage": 1.41,
+    "avg_memory_usage": 34.32,
+    "timestamp": "2026-01-28 12:14:58"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 1,
+    "test_duration": 70.27,
+    "avg_ue_registration_time_sec": 0.236,
+    "max_cpu_usage": 0.99,
+    "avg_memory_usage": 34.94,
+    "timestamp": "2026-01-28 20:17:39"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 17,
+    "test_duration": 85.573,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 35.45,
+    "timestamp": "2026-01-28 21:39:46"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 11,
+    "test_duration": 23.611,
+    "avg_ue_registration_time_sec": 0.25,
+    "max_cpu_usage": 1.27,
+    "avg_memory_usage": 34.34,
+    "timestamp": "2026-01-28 18:31:52"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 7,
+    "test_duration": 55.107,
+    "avg_ue_registration_time_sec": 0.235,
+    "max_cpu_usage": 1.04,
+    "avg_memory_usage": 35.0,
+    "timestamp": "2026-01-28 19:44:28"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 13,
+    "test_duration": 39.804,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 34.47,
+    "timestamp": "2026-01-28 13:15:39"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 17,
+    "test_duration": 9.377,
+    "avg_ue_registration_time_sec": 0.262,
+    "max_cpu_usage": 1.56,
+    "avg_memory_usage": 34.27,
+    "timestamp": "2026-01-28 12:03:14"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 17,
+    "test_duration": 101.477,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 0.93,
+    "avg_memory_usage": 35.62,
+    "timestamp": "2026-01-28 22:36:19"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 7,
+    "test_duration": 55.162,
+    "avg_ue_registration_time_sec": 0.24,
+    "max_cpu_usage": 1.01,
+    "avg_memory_usage": 34.81,
+    "timestamp": "2026-01-28 13:49:29"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 11,
+    "test_duration": 85.818,
+    "avg_ue_registration_time_sec": 0.268,
+    "max_cpu_usage": 1.53,
+    "avg_memory_usage": 35.3,
+    "timestamp": "2026-01-28 15:28:40"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 1,
+    "test_duration": 72.851,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 35.21,
+    "timestamp": "2026-01-28 14:20:41"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 1,
+    "test_duration": 9.463,
+    "avg_ue_registration_time_sec": 0.266,
+    "max_cpu_usage": 1.2,
+    "avg_memory_usage": 34.15,
+    "timestamp": "2026-01-28 17:40:35"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 3,
+    "test_duration": 87.17,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.95,
+    "avg_memory_usage": 35.44,
+    "timestamp": "2026-01-28 21:11:37"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 15,
+    "test_duration": 9.436,
+    "avg_ue_registration_time_sec": 0.25,
+    "max_cpu_usage": 1.02,
+    "avg_memory_usage": 34.14,
+    "timestamp": "2026-01-28 18:05:10"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 11,
+    "test_duration": 41.472,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 1.01,
+    "avg_memory_usage": 34.47,
+    "timestamp": "2026-01-28 19:13:29"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 9,
+    "test_duration": 9.391,
+    "avg_ue_registration_time_sec": 0.261,
+    "max_cpu_usage": 1.12,
+    "avg_memory_usage": 34.18,
+    "timestamp": "2026-01-28 11:49:29"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 5,
+    "test_duration": 55.081,
+    "avg_ue_registration_time_sec": 0.255,
+    "max_cpu_usage": 0.99,
+    "avg_memory_usage": 34.9,
+    "timestamp": "2026-01-28 13:43:52"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 9,
+    "test_duration": 55.717,
+    "avg_ue_registration_time_sec": 0.252,
+    "max_cpu_usage": 1.04,
+    "avg_memory_usage": 34.81,
+    "timestamp": "2026-01-28 19:50:05"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 15,
+    "test_duration": 41.364,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 0.93,
+    "avg_memory_usage": 34.59,
+    "timestamp": "2026-01-28 13:20:46"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 3,
+    "test_duration": 101.253,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 1.23,
+    "avg_memory_usage": 35.55,
+    "timestamp": "2026-01-28 15:58:43"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 13,
+    "test_duration": 86.493,
+    "avg_ue_registration_time_sec": 0.273,
+    "max_cpu_usage": 1.67,
+    "avg_memory_usage": 35.35,
+    "timestamp": "2026-01-28 15:35:20"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 9,
+    "test_duration": 39.941,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 1.06,
+    "avg_memory_usage": 34.74,
+    "timestamp": "2026-01-28 19:08:21"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 17,
+    "test_duration": 24.624,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 1.1,
+    "avg_memory_usage": 34.27,
+    "timestamp": "2026-01-28 12:40:46"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 11,
+    "test_duration": 88.406,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 0.93,
+    "avg_memory_usage": 35.39,
+    "timestamp": "2026-01-28 21:27:44"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 15,
+    "test_duration": 39.947,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 1.03,
+    "avg_memory_usage": 34.58,
+    "timestamp": "2026-01-28 19:19:58"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 15,
+    "test_duration": 70.51,
+    "avg_ue_registration_time_sec": 0.258,
+    "max_cpu_usage": 1.46,
+    "avg_memory_usage": 35.24,
+    "timestamp": "2026-01-28 14:49:23"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 3,
+    "test_duration": 71.936,
+    "avg_ue_registration_time_sec": 0.246,
+    "max_cpu_usage": 0.93,
+    "avg_memory_usage": 35.19,
+    "timestamp": "2026-01-28 20:23:47"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 13,
+    "test_duration": 100.776,
+    "avg_ue_registration_time_sec": 0.242,
+    "max_cpu_usage": 0.93,
+    "avg_memory_usage": 35.54,
+    "timestamp": "2026-01-28 22:24:54"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 15,
+    "test_duration": 100.701,
+    "avg_ue_registration_time_sec": 0.257,
+    "max_cpu_usage": 1.1,
+    "avg_memory_usage": 35.53,
+    "timestamp": "2026-01-28 16:27:20"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 9,
+    "test_duration": 70.35,
+    "avg_ue_registration_time_sec": 0.249,
+    "max_cpu_usage": 1.03,
+    "avg_memory_usage": 35.09,
+    "timestamp": "2026-01-28 14:35:44"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 17,
+    "test_duration": 101.297,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.99,
+    "avg_memory_usage": 35.73,
+    "timestamp": "2026-01-28 17:30:41"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 11,
+    "test_duration": 9.346,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 1.01,
+    "avg_memory_usage": 34.18,
+    "timestamp": "2026-01-28 17:56:59"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 17,
+    "test_duration": 8.389,
+    "avg_ue_registration_time_sec": 0.252,
+    "max_cpu_usage": 1.12,
+    "avg_memory_usage": 34.09,
+    "timestamp": "2026-01-28 18:07:54"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 15,
+    "test_duration": 100.905,
+    "avg_ue_registration_time_sec": 0.239,
+    "max_cpu_usage": 0.89,
+    "avg_memory_usage": 35.7,
+    "timestamp": "2026-01-28 22:29:10"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 5,
+    "test_duration": 100.102,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 35.63,
+    "timestamp": "2026-01-28 16:05:52"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 7,
+    "test_duration": 40.371,
+    "avg_ue_registration_time_sec": 0.25,
+    "max_cpu_usage": 0.99,
+    "avg_memory_usage": 34.72,
+    "timestamp": "2026-01-28 19:05:07"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 7,
+    "test_duration": 85.664,
+    "avg_ue_registration_time_sec": 0.252,
+    "max_cpu_usage": 1.37,
+    "avg_memory_usage": 35.21,
+    "timestamp": "2026-01-28 15:17:55"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 19,
+    "test_duration": 11.942,
+    "avg_ue_registration_time_sec": 0.258,
+    "max_cpu_usage": 1.03,
+    "avg_memory_usage": 34.15,
+    "timestamp": "2026-01-28 18:10:40"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 7,
+    "test_duration": 102.469,
+    "avg_ue_registration_time_sec": 0.253,
+    "max_cpu_usage": 1.14,
+    "avg_memory_usage": 35.64,
+    "timestamp": "2026-01-28 16:10:11"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 19,
+    "test_duration": 55.085,
+    "avg_ue_registration_time_sec": 0.236,
+    "max_cpu_usage": 0.95,
+    "avg_memory_usage": 34.93,
+    "timestamp": "2026-01-28 20:13:54"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 13,
+    "test_duration": 55.051,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 1.03,
+    "avg_memory_usage": 34.94,
+    "timestamp": "2026-01-28 19:59:11"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 7,
+    "test_duration": 70.131,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.97,
+    "avg_memory_usage": 35.17,
+    "timestamp": "2026-01-28 20:36:03"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 5,
+    "test_duration": 87.088,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 35.5,
+    "timestamp": "2026-01-28 21:15:38"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 3,
+    "test_duration": 24.62,
+    "avg_ue_registration_time_sec": 0.253,
+    "max_cpu_usage": 1.24,
+    "avg_memory_usage": 34.3,
+    "timestamp": "2026-01-28 18:16:39"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 13,
+    "test_duration": 100.629,
+    "avg_ue_registration_time_sec": 0.244,
+    "max_cpu_usage": 0.85,
+    "avg_memory_usage": 35.67,
+    "timestamp": "2026-01-28 16:23:02"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 3,
+    "test_duration": 9.401,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 1.03,
+    "avg_memory_usage": 34.28,
+    "timestamp": "2026-01-28 17:43:19"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 11,
+    "test_duration": 100.969,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.94,
+    "avg_memory_usage": 35.69,
+    "timestamp": "2026-01-28 22:20:39"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 1,
+    "test_duration": 85.619,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.9,
+    "avg_memory_usage": 35.35,
+    "timestamp": "2026-01-28 21:04:58"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 11,
+    "test_duration": 70.631,
+    "avg_ue_registration_time_sec": 0.255,
+    "max_cpu_usage": 1.17,
+    "avg_memory_usage": 35.27,
+    "timestamp": "2026-01-28 14:39:30"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 7,
+    "test_duration": 9.406,
+    "avg_ue_registration_time_sec": 0.256,
+    "max_cpu_usage": 1.24,
+    "avg_memory_usage": 34.19,
+    "timestamp": "2026-01-28 17:48:48"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 3,
+    "test_duration": 70.448,
+    "avg_ue_registration_time_sec": 0.239,
+    "max_cpu_usage": 0.9,
+    "avg_memory_usage": 35.07,
+    "timestamp": "2026-01-28 14:24:26"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 19,
+    "test_duration": 25.142,
+    "avg_ue_registration_time_sec": 0.256,
+    "max_cpu_usage": 0.98,
+    "avg_memory_usage": 34.48,
+    "timestamp": "2026-01-28 18:48:41"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 9,
+    "test_duration": 24.603,
+    "avg_ue_registration_time_sec": 0.246,
+    "max_cpu_usage": 1.01,
+    "avg_memory_usage": 34.34,
+    "timestamp": "2026-01-28 12:23:57"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 3,
+    "test_duration": 100.921,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.88,
+    "avg_memory_usage": 35.59,
+    "timestamp": "2026-01-28 21:54:57"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 7,
+    "test_duration": 70.976,
+    "avg_ue_registration_time_sec": 0.253,
+    "max_cpu_usage": 1.15,
+    "avg_memory_usage": 35.06,
+    "timestamp": "2026-01-28 14:31:59"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 1,
+    "test_duration": 103.168,
+    "avg_ue_registration_time_sec": 0.233,
+    "max_cpu_usage": 0.87,
+    "avg_memory_usage": 35.78,
+    "timestamp": "2026-01-28 21:50:42"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 19,
+    "test_duration": 40.385,
+    "avg_ue_registration_time_sec": 0.258,
+    "max_cpu_usage": 0.98,
+    "avg_memory_usage": 34.48,
+    "timestamp": "2026-01-28 19:28:19"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 1,
+    "test_duration": 24.673,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 1.15,
+    "avg_memory_usage": 34.38,
+    "timestamp": "2026-01-28 18:13:40"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 15,
+    "test_duration": 70.393,
+    "avg_ue_registration_time_sec": 0.242,
+    "max_cpu_usage": 0.97,
+    "avg_memory_usage": 35.21,
+    "timestamp": "2026-01-28 20:53:25"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 7,
+    "test_duration": 87.176,
+    "avg_ue_registration_time_sec": 0.249,
+    "max_cpu_usage": 0.98,
+    "avg_memory_usage": 35.48,
+    "timestamp": "2026-01-28 21:19:40"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 19,
+    "test_duration": 26.042,
+    "avg_ue_registration_time_sec": 0.247,
+    "max_cpu_usage": 1.05,
+    "avg_memory_usage": 34.35,
+    "timestamp": "2026-01-28 12:45:25"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 9,
+    "test_duration": 70.806,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.97,
+    "avg_memory_usage": 35.07,
+    "timestamp": "2026-01-28 20:39:49"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 3,
+    "test_duration": 9.373,
+    "avg_ue_registration_time_sec": 0.264,
+    "max_cpu_usage": 1.11,
+    "avg_memory_usage": 34.25,
+    "timestamp": "2026-01-28 11:39:52"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 1,
+    "test_duration": 9.325,
+    "avg_ue_registration_time_sec": 0.261,
+    "max_cpu_usage": 1.53,
+    "avg_memory_usage": 34.36,
+    "timestamp": "2026-01-28 11:37:07"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 9,
+    "test_duration": 103.51,
+    "avg_ue_registration_time_sec": 0.262,
+    "max_cpu_usage": 1.26,
+    "avg_memory_usage": 35.73,
+    "timestamp": "2026-01-28 16:14:29"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 15,
+    "test_duration": 85.709,
+    "avg_ue_registration_time_sec": 0.256,
+    "max_cpu_usage": 1.22,
+    "avg_memory_usage": 35.25,
+    "timestamp": "2026-01-28 15:39:21"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 13,
+    "test_duration": 24.851,
+    "avg_ue_registration_time_sec": 0.266,
+    "max_cpu_usage": 1.58,
+    "avg_memory_usage": 34.67,
+    "timestamp": "2026-01-28 12:33:10"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 15,
+    "test_duration": 87.156,
+    "avg_ue_registration_time_sec": 0.249,
+    "max_cpu_usage": 0.95,
+    "avg_memory_usage": 35.38,
+    "timestamp": "2026-01-28 21:35:46"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 17,
+    "test_duration": 27.207,
+    "avg_ue_registration_time_sec": 0.249,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 34.32,
+    "timestamp": "2026-01-28 18:44:05"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 7,
+    "test_duration": 102.403,
+    "avg_ue_registration_time_sec": 0.24,
+    "max_cpu_usage": 0.93,
+    "avg_memory_usage": 35.73,
+    "timestamp": "2026-01-28 22:06:22"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 13,
+    "test_duration": 85.702,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.94,
+    "avg_memory_usage": 35.3,
+    "timestamp": "2026-01-28 21:31:44"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 17,
+    "test_duration": 55.161,
+    "avg_ue_registration_time_sec": 0.238,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 35.13,
+    "timestamp": "2026-01-28 20:08:18"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 15,
+    "test_duration": 24.712,
+    "avg_ue_registration_time_sec": 0.255,
+    "max_cpu_usage": 1.22,
+    "avg_memory_usage": 34.52,
+    "timestamp": "2026-01-28 18:39:27"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 13,
+    "test_duration": 11.907,
+    "avg_ue_registration_time_sec": 0.265,
+    "max_cpu_usage": 0.95,
+    "avg_memory_usage": 34.27,
+    "timestamp": "2026-01-28 11:56:23"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 17,
+    "test_duration": 73.141,
+    "avg_ue_registration_time_sec": 0.261,
+    "max_cpu_usage": 1.46,
+    "avg_memory_usage": 35.27,
+    "timestamp": "2026-01-28 14:55:36"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 70,
+    "iteration": 19,
+    "test_duration": 72.101,
+    "avg_ue_registration_time_sec": 0.266,
+    "max_cpu_usage": 1.48,
+    "avg_memory_usage": 35.05,
+    "timestamp": "2026-01-28 14:59:23"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 17,
+    "test_duration": 55.113,
+    "avg_ue_registration_time_sec": 0.244,
+    "max_cpu_usage": 0.9,
+    "avg_memory_usage": 35.05,
+    "timestamp": "2026-01-28 14:13:24"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 13,
+    "test_duration": 70.339,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 35.1,
+    "timestamp": "2026-01-28 20:49:40"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 5,
+    "test_duration": 86.313,
+    "avg_ue_registration_time_sec": 0.277,
+    "max_cpu_usage": 1.79,
+    "avg_memory_usage": 35.5,
+    "timestamp": "2026-01-28 15:13:53"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 19,
+    "test_duration": 100.911,
+    "avg_ue_registration_time_sec": 0.239,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 35.65,
+    "timestamp": "2026-01-28 17:37:50"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 3,
+    "test_duration": 39.867,
+    "avg_ue_registration_time_sec": 0.246,
+    "max_cpu_usage": 1.01,
+    "avg_memory_usage": 34.56,
+    "timestamp": "2026-01-28 18:56:46"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 3,
+    "test_duration": 42.377,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 0.98,
+    "avg_memory_usage": 34.8,
+    "timestamp": "2026-01-28 12:53:48"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 19,
+    "test_duration": 39.974,
+    "avg_ue_registration_time_sec": 0.244,
+    "max_cpu_usage": 0.99,
+    "avg_memory_usage": 34.89,
+    "timestamp": "2026-01-28 13:29:08"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 11,
+    "test_duration": 41.776,
+    "avg_ue_registration_time_sec": 0.246,
+    "max_cpu_usage": 1.0,
+    "avg_memory_usage": 34.74,
+    "timestamp": "2026-01-28 13:10:32"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 19,
+    "test_duration": 100.854,
+    "avg_ue_registration_time_sec": 0.242,
+    "max_cpu_usage": 0.89,
+    "avg_memory_usage": 35.83,
+    "timestamp": "2026-01-28 22:40:34"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 10,
+    "iteration": 15,
+    "test_duration": 9.392,
+    "avg_ue_registration_time_sec": 0.26,
+    "max_cpu_usage": 1.07,
+    "avg_memory_usage": 34.07,
+    "timestamp": "2026-01-28 11:59:08"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 100,
+    "iteration": 1,
+    "test_duration": 103.85,
+    "avg_ue_registration_time_sec": 0.275,
+    "max_cpu_usage": 1.57,
+    "avg_memory_usage": 35.72,
+    "timestamp": "2026-01-28 15:54:27"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 100,
+    "iteration": 9,
+    "test_duration": 100.683,
+    "avg_ue_registration_time_sec": 0.238,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 35.65,
+    "timestamp": "2026-01-28 22:13:30"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 7,
+    "test_duration": 24.763,
+    "avg_ue_registration_time_sec": 0.254,
+    "max_cpu_usage": 1.37,
+    "avg_memory_usage": 34.3,
+    "timestamp": "2026-01-28 12:20:58"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 13,
+    "test_duration": 9.404,
+    "avg_ue_registration_time_sec": 0.253,
+    "max_cpu_usage": 1.09,
+    "avg_memory_usage": 34.14,
+    "timestamp": "2026-01-28 18:01:04"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 10,
+    "iteration": 5,
+    "test_duration": 9.415,
+    "avg_ue_registration_time_sec": 0.249,
+    "max_cpu_usage": 1.03,
+    "avg_memory_usage": 34.03,
+    "timestamp": "2026-01-28 17:46:03"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 1,
+    "test_duration": 39.809,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 34.77,
+    "timestamp": "2026-01-28 12:48:39"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 17,
+    "test_duration": 87.428,
+    "avg_ue_registration_time_sec": 0.266,
+    "max_cpu_usage": 1.56,
+    "avg_memory_usage": 35.48,
+    "timestamp": "2026-01-28 15:46:05"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 9,
+    "test_duration": 87.149,
+    "avg_ue_registration_time_sec": 0.241,
+    "max_cpu_usage": 0.87,
+    "avg_memory_usage": 35.5,
+    "timestamp": "2026-01-28 21:23:41"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 25,
+    "iteration": 15,
+    "test_duration": 24.671,
+    "avg_ue_registration_time_sec": 0.246,
+    "max_cpu_usage": 0.88,
+    "avg_memory_usage": 34.45,
+    "timestamp": "2026-01-28 12:36:11"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 13,
+    "test_duration": 24.69,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 1.3,
+    "avg_memory_usage": 34.44,
+    "timestamp": "2026-01-28 18:36:27"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 85,
+    "iteration": 3,
+    "test_duration": 84.98,
+    "avg_ue_registration_time_sec": 0.259,
+    "max_cpu_usage": 1.42,
+    "avg_memory_usage": 35.35,
+    "timestamp": "2026-01-28 15:09:50"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 40,
+    "iteration": 13,
+    "test_duration": 39.885,
+    "avg_ue_registration_time_sec": 0.245,
+    "max_cpu_usage": 0.93,
+    "avg_memory_usage": 34.69,
+    "timestamp": "2026-01-28 19:16:43"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 7,
+    "test_duration": 25.206,
+    "avg_ue_registration_time_sec": 0.24,
+    "max_cpu_usage": 0.92,
+    "avg_memory_usage": 34.33,
+    "timestamp": "2026-01-28 18:25:51"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 25,
+    "iteration": 9,
+    "test_duration": 27.222,
+    "avg_ue_registration_time_sec": 0.254,
+    "max_cpu_usage": 1.14,
+    "avg_memory_usage": 34.58,
+    "timestamp": "2026-01-28 18:28:53"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 55,
+    "iteration": 3,
+    "test_duration": 55.188,
+    "avg_ue_registration_time_sec": 0.253,
+    "max_cpu_usage": 0.97,
+    "avg_memory_usage": 34.95,
+    "timestamp": "2026-01-28 13:38:15"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 85,
+    "iteration": 19,
+    "test_duration": 85.7,
+    "avg_ue_registration_time_sec": 0.248,
+    "max_cpu_usage": 0.95,
+    "avg_memory_usage": 35.29,
+    "timestamp": "2026-01-28 21:43:47"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 55,
+    "iteration": 3,
+    "test_duration": 56.647,
+    "avg_ue_registration_time_sec": 0.249,
+    "max_cpu_usage": 0.94,
+    "avg_memory_usage": 34.89,
+    "timestamp": "2026-01-28 19:35:21"
+  },
+  {
+    "auth_method": "EAP_AKA",
+    "ue_count": 70,
+    "iteration": 5,
+    "test_duration": 72.824,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.95,
+    "avg_memory_usage": 35.3,
+    "timestamp": "2026-01-28 20:29:57"
+  },
+  {
+    "auth_method": "5G_AKA",
+    "ue_count": 40,
+    "iteration": 17,
+    "test_duration": 41.609,
+    "avg_ue_registration_time_sec": 0.243,
+    "max_cpu_usage": 0.96,
+    "avg_memory_usage": 34.8,
+    "timestamp": "2026-01-28 13:25:54"
+  }
+]
